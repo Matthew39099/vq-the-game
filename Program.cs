@@ -33,8 +33,8 @@ namespace vg_the_game
 
         static void Main(string[] args)
         {
-
-            Start();
+            Console.WriteLine("");
+            Console.ReadLine();
         }
 
         static void will()//method to add a enemy copy this when adding someone to the game
