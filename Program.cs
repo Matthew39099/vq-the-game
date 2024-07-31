@@ -174,8 +174,8 @@ namespace vg_the_game
         static void Start()
         {
             Console.Clear();
-            Console.WriteLine("You are the one and only Vaughn Malkin. \nYou wake up in a cold sweat, first year math exams cover you. ");
-            Thread.Sleep(1000);
+            Console.WriteLine("You are the one and only Vaughn Malkin. \nYou wake up in a cold sweat, first year math exams cover you. \nPress enter to continue");
+            Console.ReadLine();
             Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house as.\nYou realize you are missing your trusty bottle of gin");
             Thread.Sleep(2000);
             Console.WriteLine("Your mission. Find your bottle of Gin!\nSo you can go home and have a great weekend!");
@@ -243,10 +243,14 @@ namespace vg_the_game
                     Console.WriteLine("You have picked up the pen");
                     pen = 1;
                 }
-                else
+                else if (input == 0)
                 {
                     pen = 0; //If there is a chance they somehow go back and don't pick up the pen (Can be removed later)
                     Console.WriteLine("You choose not to pick up the pen it probably wasn't important");
+                }
+                else
+                {
+                    Console.WriteLine("Please select from the displayed options");
                 }
             }
 
