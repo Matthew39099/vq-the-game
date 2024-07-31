@@ -67,7 +67,7 @@ namespace vg_the_game
         static void farmBot()
         {
             enemy farmBot;
-            farmBot.name = "Farm Bot";//sets enemy name
+            farmBot.name = "Farm RoBot";//sets enemy name
             farmBot.enemyHealth = 100;// sets enemy health
             EnemyHealth = farmBot.enemyHealth;// overides the last enemies health
             EnemyName = farmBot.name;
