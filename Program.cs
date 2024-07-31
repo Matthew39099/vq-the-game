@@ -174,11 +174,15 @@ namespace vg_the_game
         static void Start()
         {
             Console.Clear();
-            Console.WriteLine("You are the one and only Vaughn Malkin. \nYou wake up in a cold sweat, first year math exams cover you. \nPress enter to continue");
+            Console.WriteLine("You wake up in a cold sweat, you are covered in first year math exams cover you. \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house as.\nYou realize you are missing your trusty bottle of gin");
-            Thread.Sleep(2000);
-            Console.WriteLine("Your mission. Find your bottle of Gin!\nSo you can go home and have a great weekend!");
+            Console.WriteLine("You thoughts are fuzzy but you remember two things.");
+            Console.ReadLine();
+            Console.WriteLine("You are the almighty, powerful, robust Vaughn Malkin! And you need your Newplymouth Navy Gin. \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house as.\nYou realize you are missing your trusty bottle of gin \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Mission: Find your bottle of Gin!\nSo you can go home and have a great weekend!");
             Console.WriteLine("Press enter to start");
             Console.ReadLine();
             roomid = 0;
