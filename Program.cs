@@ -36,6 +36,7 @@ namespace vg_the_game
 
             Start();
         }
+        /*starting bug fixing*/
 
         static void will()//method to add a enemy copy this when adding someone to the game
         {
