@@ -26,7 +26,7 @@ namespace vg_the_game
         public static int card = 0;
         public static int hallwayid = 0;
         //Room Visit ids
-        public static int officeid = 0, hallwayintro = 0, closetid = 0, boom1id = 0, broom2id = 0;  //first floor 
+        public static int officeid = 0, hallwayintro = 0, closetid = 0, boom1id = 0, D102id = 0;  //first floor 
         public static int printerid = 0, studioid = 0, mathsid = 0; //second floor
 
 
@@ -253,7 +253,7 @@ namespace vg_the_game
 
             hallwayintro = 1;
 
-            Console.WriteLine("You stand in the hallway you can navigate to the (office), (broom1), (broom2), (closet)"); //Need to rename broom1 and broom2
+            Console.WriteLine("You stand in the hallway you can navigate to the (office), (D101), (D102), (closet)"); //Need to rename D101 and D102
             Console.WriteLine("Once you've explored all rooms on level 1, press ENTER");
             string choice = Console.ReadLine();
             switch (choice)
@@ -268,18 +268,18 @@ namespace vg_the_game
                 case "office":
                     office();
                     break;
-                case "broom1":
-                    broom1();
+                case "D101":
+                    D101();
                     break;
-                case "broom2":
-                    broom2();
+                case "D102":
+                    D102();
                     break;
                 case "closet":
                     closet();
                     break;
             }
 
-            if (officeid == 1 && closetid == 1 && boom1id == 1 && broom2id== 1) //I feel like this should be a while loop and while not equal to this everything else runs for level 1?
+            if (officeid == 1 && closetid == 1 && boom1id == 1 && D102id== 1) //I feel like this should be a while loop and while not equal to this everything else runs for level 1?
             {
                 Console.WriteLine("Congrats you have explored all of level 1");
                 Thread.Sleep(3000);
@@ -349,7 +349,7 @@ namespace vg_the_game
 
 
         //Boss Room
-        static void broom1()
+        static void D101()
         {
             string response;
 
@@ -382,14 +382,14 @@ namespace vg_the_game
                 fight();
             }
 
-            Console.WriteLine("You stand in the broom1 you can navigate to the (broom1), (hallway)");
+            Console.WriteLine("You stand in the D101 you can navigate to the (D101), (hallway)");
             string choice = Console.ReadLine();
             switch (choice)
             {
-                case "broom1":
+                case "D101":
                     Console.WriteLine("You are already here press ENTER to continue");
                     Console.ReadLine();
-                    broom1();
+                    D101();
                     break;
                 case "hallway":
                     hallway();
@@ -398,11 +398,11 @@ namespace vg_the_game
         }
 
         //Boss Room
-        static void broom2()
+        static void D102()
         {
             string response;
 
-            if (broom2id == 1)
+            if (D102id == 1)
             {
                 Console.WriteLine("You have already visited here, you have been sent back to the hallway");
                 hallway();
@@ -413,7 +413,7 @@ namespace vg_the_game
             //Business Student Boss
             Console.Clear();
             roomid = 5;
-            broom2id = 1;
+            D102id = 1;
             Console.WriteLine("You enter into a into one of the business studies class rooms");
             Thread.Sleep(1000);
             Console.WriteLine("The student comes over and begins trying to sell you crypto");
@@ -458,15 +458,15 @@ namespace vg_the_game
                 BussinessGuy();
                 fight();
             }
-            Console.WriteLine("You stand in the broom2 you can navigate to the (broom2), (hallway)");
-            Console.WriteLine("You can now navigate to (broom2) or (hallway)");
+            Console.WriteLine("You stand in the D102 you can navigate to the (D102), (hallway)");
+            Console.WriteLine("You can now navigate to (D102) or (hallway)");
             string choice = Console.ReadLine();
             switch (choice)
             {
-                case "broom2":
+                case "D102":
                     Console.WriteLine("You are already here press ENTER to continue");
                     Console.ReadLine();
-                    //broom2();
+                    //D102();
                     Console.WriteLine("You can't go back into a room you are already in! Try the hallway instead");
                     hallway();
                     break;
