@@ -178,11 +178,11 @@ namespace vg_the_game
             Console.ReadLine();
             Console.WriteLine("You thoughts are fuzzy but you remember two things.");
             Console.ReadLine();
-            Console.WriteLine("You are the almighty, powerful, robust Vaughn Malkin! And you need your Newplymouth Navy Gin. \nPress Enter to continue");
+            Console.WriteLine("You are the almighty, powerful, robust, meaty, sturdy, solid Vaughn Malkin and you need your Newplymouth Navy Gin! \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house as.\nYou realize you are missing your trusty bottle of gin \nPress Enter to continue");
+            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house.\nYou realize you are missing you favourite trusty bottle of Newplymouth Navy Gin \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Mission: Find your bottle of Gin!\nSo you can go home and have a great weekend!");
+            Console.WriteLine("Mission: Find your bottle of Newplymouth Navy Gin!\nSo you can go home and have a great weekend!");
             Console.WriteLine("Press enter to start");
             Console.ReadLine();
             roomid = 0;
@@ -202,12 +202,20 @@ namespace vg_the_game
 
             Console.Clear();
             roomid = 1;
-            Console.WriteLine("You are in the Office");
-            Thread.Sleep(1000);
-            Console.WriteLine("Your environmental impact of printing off rain forests of paper for your math exams, has enraged the office lady who appears to be a blob of glue and staplers for hands ");
-            Thread.Sleep(1000);
-            Console.WriteLine("You must now fight your way out of this one!");
+            Console.WriteLine("You are in the Office \nPress Enter to Continue" );
+            Console.ReadLine();
+            Console.WriteLine("Your constant printing of rain forests paper for your math exams, has enraged the office lady who appears to be a blob of glue and staplers for hands");
+            Console.ReadLine();
+            Console.WriteLine("VAUGHN! Your copious amounts of paper usage as greatly affected the enviroment have you no shame! \n Press Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Rain forest shman forest, the children need these papers to do their exams. What are you the Lorax, Vaughn replied \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Your response angers the office lady \nPress Enter to continue");
             Thread.Sleep(2000);
+            Console.WriteLine("I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U");
+            Thread.Sleep(2000);
+            Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue");
+            Console.ReadLine();
             officeid = 1; //prevents user from going back
             will(); //Will is known as the office lady
             fight(); //I believe this should be moved into the office yes you are correct i have moved it there now
