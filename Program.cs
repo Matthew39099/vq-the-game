@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace vg_the_game
 {
-    public struct enemy
+    public struct Enemy
     {
         public string name;
         public int enemyHealth;
@@ -39,7 +39,7 @@ namespace vg_the_game
 
         static void will()//method to add a enemy copy this when adding someone to the game
         {
-            enemy will;
+            Enemy will;
             will.name = "Office Lady";//sets enemy name
             will.enemyHealth = 25;// sets enemy health
             EnemyHealth = will.enemyHealth;// overides the last enemies health
@@ -48,7 +48,7 @@ namespace vg_the_game
         }
         static void BussinessGuy()
         {
-            enemy BussinessStudent;
+            Enemy BussinessStudent;
             BussinessStudent.name = "Business Student";//sets enemy name
             BussinessStudent.enemyHealth = 20;// sets enemy health
             EnemyHealth = BussinessStudent.enemyHealth;// overides the last enemies health
@@ -57,7 +57,7 @@ namespace vg_the_game
         }
         static void Krissi()
         {
-            enemy Krissi;
+            Enemy Krissi;
             Krissi.name = "Krissi Wood";//sets enemy name
             Krissi.enemyHealth = 50;// sets enemy health
             EnemyHealth = Krissi.enemyHealth;// overides the last enemies health
@@ -66,7 +66,7 @@ namespace vg_the_game
         }
         static void farmBot()
         {
-            enemy farmBot;
+            Enemy farmBot;
             farmBot.name = "Farm RoBot";//sets enemy name
             farmBot.enemyHealth = 100;// sets enemy health
             EnemyHealth = farmBot.enemyHealth;// overides the last enemies health
@@ -75,7 +75,7 @@ namespace vg_the_game
         }
         static void printer()
         {
-            enemy printer;
+            Enemy printer;
             printer.name = "3D Printer";//sets enemy name
             printer.enemyHealth = 30;// sets enemy health
             EnemyHealth = printer.enemyHealth;// overides the last enemies health
@@ -84,7 +84,7 @@ namespace vg_the_game
         }
         static void mathsStudent()
         {
-            enemy mathStudent;
+            Enemy mathStudent;
             mathStudent.name = "Deacon";//sets enemy name
             mathStudent.enemyHealth = 20;// sets enemy health
             EnemyHealth = mathStudent.enemyHealth;// overides the last enemies health
@@ -93,7 +93,7 @@ namespace vg_the_game
         }
         static void Victor()
         {
-            enemy Victor;
+            Enemy Victor;
             Victor.name = "Victor";//sets enemy name
             Victor.enemyHealth = 75;// sets enemy health
             EnemyHealth = Victor.enemyHealth;// overides the last enemies health
