@@ -176,14 +176,16 @@ namespace vg_the_game
             Console.Clear();
             Console.WriteLine("You wake up in a cold sweat, you are covered in first year math exams cover you. \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("You thoughts are fuzzy but you remember two things.");
+            Console.WriteLine("You thoughts are fuzzy but you remember two things.  \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("You are the almighty, powerful, robust, meaty, sturdy, solid Vaughn Malkin and you need your Newplymouth Navy Gin! \nPress Enter to continue");
+            Console.WriteLine("You are the ALMIGHTY, POWERFUL, ROBUST, MEATY, STURDY, SOLID Vaughn Malkin and you need your Newplymouth Navy Gin! \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house.\nYou realize you are missing you favourite trusty bottle of Newplymouth Navy Gin \nPress Enter to continue");
+            Console.WriteLine("Just before you leave to go home to the 'Space Station' which is what you refer to as your house.\nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Mission: Find your bottle of Newplymouth Navy Gin!\nSo you can go home and have a great weekend!");
-            Console.WriteLine("Press enter to start");
+            Console.WriteLine("You realize you are missing you favorite trusty bottle of Newplymouth Navy Gin \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Mission: Find your bottle of Newplymouth Navy Gin! \nSo you can go home and have a great weekend!");
+            Console.WriteLine("Press enter to start"); 
             Console.ReadLine();
             roomid = 0;
             armour = 0;
@@ -204,18 +206,20 @@ namespace vg_the_game
             roomid = 1;
             Console.WriteLine("You are in the Office \nPress Enter to Continue" );
             Console.ReadLine();
-            Console.WriteLine("Your constant printing of rain forests paper for your math exams, has enraged the office lady who appears to be a blob of glue and staplers for hands");
+            Console.WriteLine("Your constant printing of rain forests paper for your math exams, has enraged the office lady  \n Press Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("[OFFICE LADY]: VAUGHN! Your copious amounts of paper usage as greatly affected the enviroment have you no shame! \n Press Enter to continue");
+            Console.WriteLine("[OFFICE LADY]: VAUGHN! Your copious amounts of paper usage as greatly affected the environment have you no shame! \n Press Enter to continue");
             Console.ReadLine();
             Console.WriteLine("[Vaughn]: Rain forest shman forest, the children need these papers to do their exams. What are you the Lorax \nPress Enter to continue");
             Console.ReadLine();
             Console.WriteLine("Your response angers the office lady \nPress Enter to continue");
-            Thread.Sleep(2000);
-            Console.WriteLine("[Office Lady]: I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U");
-            Thread.Sleep(2000);
-            Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue" +
-                "");
+            Console.ReadLine();
+            Console.WriteLine("[Office Lady]: I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("You see he morphs into a blob of glue and staplers for hands \nPress Enter to continue ");
+            Console.ReadLine();
+            Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue");
+
             Console.ReadLine();
             officeid = 1; //prevents user from going back
             will(); //Will is known as the office lady
@@ -330,6 +334,7 @@ namespace vg_the_game
             Console.WriteLine("You see Krissi emerge from the shadows \nPress Enter to continue");
             Console.ReadLine();
             Console.WriteLine("[Krissi]: Vaughn... I trust that you have brought me a pen?");
+            Console.ReadLine();
             Console.WriteLine(" If you would like you see your boots again, I would a pen in return \nPress Enter to continue");
             Console.ReadLine();
 
@@ -474,7 +479,8 @@ namespace vg_the_game
             }
             else
             {
-                Console.WriteLine("[Business Studies Student]: HOW DEAR YOU! YOU HAVEN'T EVEN LISTEND TO MY PITCH");
+                Console.WriteLine("[Business Studies Student]: HOW DEAR YOU! YOU HAVEN'T EVEN LISTEND TO MY PITCH \nPress Enter to continue");
+                Console.ReadLine();
                 BussinessGuy();
                 fight();
             }
@@ -553,11 +559,13 @@ namespace vg_the_game
 
             mathsid = 1;
 
-            Console.WriteLine("You entered the Maths Room\nDeacon is there, He does not look happy");
+            Console.WriteLine("You entered the Maths Room, Deacon is there, He does not look happy \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("[Deacon]: Vaughn you are making the tutorals a nightmare\nnone of the questions are easy");
+            Console.WriteLine("[Deacon]: Vaughn you are making the tutorials a nightmare! \nPress Enter to continue ");
             Console.ReadLine();
-            Console.WriteLine("[Deacon]: What is  eiπ + ln(−1) = x2 +∫0∞​xsin(x)​dx");
+            Console.WriteLine("None of the questions are easy! \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("[Deacon]: What is  eiπ + ln(−1) = x2 +∫0∞​xsin(x)​dx \nPress Enter to continue");
             Console.ReadLine();
             Console.WriteLine("[Deacon]: Wrong. I will have to tech you a lesson about maths");
             card = 1;
@@ -576,8 +584,8 @@ namespace vg_the_game
 
             studioid = 1;
 
-            Console.WriteLine("Vic is here\nhe asks a serious quesetion");
-            Thread.Sleep(1000);
+            Console.WriteLine("Vic is here, he asks a serious question \nPress Enter to continue");
+            Console.ReadLine();
             Console.WriteLine("[Vic]: How many seasons of The Simpsons are there?");
             int temp = Convert.ToInt32(Console.ReadLine());
 
@@ -657,22 +665,22 @@ namespace vg_the_game
 
         static void VaughnOffice()
         {
-            Console.WriteLine("You entered Vaughn's office");
-            Thread.Sleep(1000);
+            Console.WriteLine("You entered Vaughn's office \nPress Enter to continue");
+            Console.ReadLine();
             Console.WriteLine("It's dark and gloomy");
-            Thread.Sleep(1000);
-            Console.WriteLine("A robot figure appears, It's Farm Bot!");
-            Thread.Sleep(1000);
-            Console.WriteLine("He had returned to get his revenge");
+            Console.ReadLine();
+            Console.WriteLine("A robot figure appears, It's Farm Bot! \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("He had returned to get his revenge \nPress Enter to continue");
             farmBot();
             fight();
-            Console.WriteLine("You have defeated farmbot");
+            Console.WriteLine("You have defeated farmbot \nPress Enter to continue");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("You look around your office");
-            Thread.Sleep(2000);
-            Console.WriteLine("you found your gin!");
-            Thread.Sleep(000);
+            Console.WriteLine("You look around your office \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("you found your gin! \nPress Enter to continue");
+            Console.ReadLine();
             Console.WriteLine("Zoom Out");
             Console.WriteLine("                                                                                                                                                                                                                                                                                                      ");
             Console.WriteLine("                                                        :=+##@@@@@@@@@@@@@@#*=..                                                                                                                                                                                                                      ");
