@@ -206,15 +206,16 @@ namespace vg_the_game
             Console.ReadLine();
             Console.WriteLine("Your constant printing of rain forests paper for your math exams, has enraged the office lady who appears to be a blob of glue and staplers for hands");
             Console.ReadLine();
-            Console.WriteLine("VAUGHN! Your copious amounts of paper usage as greatly affected the enviroment have you no shame! \n Press Enter to continue");
+            Console.WriteLine("[OFFICE LADY]: VAUGHN! Your copious amounts of paper usage as greatly affected the enviroment have you no shame! \n Press Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("Rain forest shman forest, the children need these papers to do their exams. What are you the Lorax, Vaughn replied \nPress Enter to continue");
+            Console.WriteLine("[Vaughn]: Rain forest shman forest, the children need these papers to do their exams. What are you the Lorax \nPress Enter to continue");
             Console.ReadLine();
             Console.WriteLine("Your response angers the office lady \nPress Enter to continue");
             Thread.Sleep(2000);
-            Console.WriteLine("I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U");
+            Console.WriteLine("[Office Lady]: I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U");
             Thread.Sleep(2000);
-            Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue");
+            Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue" +
+                "");
             Console.ReadLine();
             officeid = 1; //prevents user from going back
             will(); //Will is known as the office lady
@@ -244,9 +245,9 @@ namespace vg_the_game
            
             if (hallwayintro == 0)
             {
-                Console.WriteLine("You spot a pen lying on the ground, it seems appears to be the last Te Pūkenga BIT pen? ");
-                Thread.Sleep(1000);
-                Console.WriteLine("Would you like to pick up the pen (1) or leave it on the ground as there are better things to find (0)");
+                Console.WriteLine("You spot a pen lying on the ground, it seems appears to be the last Te Pūkenga BIT pen? \nPress Enter to continue");
+                Console.ReadLine();
+                Console.WriteLine("Would you like to pick up the pen (1) or leave it on the ground find? (0)");
                 temp = Console.ReadLine();
                 input = Convert.ToInt32(temp);
 
@@ -269,7 +270,7 @@ namespace vg_the_game
 
             hallwayintro = 1;
 
-            Console.WriteLine("You stand in the hallway you can navigate to the (office), (broom1), (broom2), (closet)"); //Need to rename broom1 and broom2
+            Console.WriteLine("You stand in the hallway, you can navigate to the (office), (broom1), (broom2), (closet)"); //Need to rename broom1 and broom2
             Console.WriteLine("Once you've explored all rooms on level 1, press ENTER");
             string choice = Console.ReadLine();
             switch (choice)
@@ -322,19 +323,22 @@ namespace vg_the_game
 
             Console.Clear();
             roomid = 3;
-            Console.WriteLine("You are in Janitor Closet");
-            Thread.Sleep(2000);
-            Console.WriteLine("You enter a dark gloomy room, Krissi appears from the shadows.");
-            Thread.Sleep(2000);
-            Console.WriteLine("[Krissi]: Vaughn... Have you brought me a pen?? If you would like you see your boots again, I would a pen in return. \n I trust you would have grabbed one from the hallway");
-            Thread.Sleep(2000);
+            Console.WriteLine("You are in Janitor Closet \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("You enter a dark gloomy room, you see an ominous shadow lurking in the shadows \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("You see Krissi emerge from the shadows \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("[Krissi]: Vaughn... I trust that you have brought me a pen?");
+            Console.WriteLine(" If you would like you see your boots again, I would a pen in return \nPress Enter to continue");
+            Console.ReadLine();
 
             if (pen == 1)
             {
-                Console.WriteLine("[Krissi]: Thank you for grabbing my pen, you know I am a true pen thief, thank you");
-                Thread.Sleep(2000);
-                Console.WriteLine("[Krissi]: Here are your special boots");
-                Thread.Sleep(1000);
+                Console.WriteLine("[Krissi]: Thank you for grabbing my pen, you know I am a true pen thief, thank you \nPress Enter to continue");
+                Console.ReadLine();
+                Console.WriteLine("[Krissi]: Here are your special boots \nPress Enter to continue");
+                Console.ReadLine();
                 armour = 0.5;
                 Thread.Sleep(1000);
                 Console.WriteLine("[YOU EQUPIED YOUR BOOTS]");
@@ -342,7 +346,7 @@ namespace vg_the_game
 
             else
             {
-                Console.WriteLine("[Krissi]: Disappointing you didn't bing me a pen how about you go else where"); //Change to Fight Code
+                Console.WriteLine("[Krissi]: Disappointing, you didn't bing me a pen how about you go else where"); //Change to Fight Code
                 Krissi();
                 fight();
             }
@@ -380,8 +384,8 @@ namespace vg_the_game
             //Angry Student Boss
             Console.Clear();
             roomid = 4;
-            Console.WriteLine("[First Year Student]: Hi Vaughn, I was just wondering if you had marked my math exam?");
-            Thread.Sleep(1000);
+            Console.WriteLine("[First Year Student]: Hi Vaughn, I was just wondering if you had marked my math exam? \nPress Enter to continue");
+            Console.ReadLine();
             Console.WriteLine("You can either respond with 'yes' or 'no'");
             response = Console.ReadLine();
 
@@ -389,7 +393,7 @@ namespace vg_the_game
 
             if (response == "yes" || response == "Yes")
             {
-                Console.WriteLine("Yes, I'll get round to marking the math papers, I just have to find my gin");
+                Console.WriteLine("Yes, I'll get around to marking the math papers, I just have to find my gin");
             }
             else if (response == "no" || response == "NO");
             {
@@ -430,43 +434,43 @@ namespace vg_the_game
             Console.Clear();
             roomid = 5;
             broom2id = 1;
-            Console.WriteLine("You enter into a into one of the business studies class rooms");
-            Thread.Sleep(1000);
-            Console.WriteLine("The student comes over and begins trying to sell you crypto");
-            Thread.Sleep(1000);
-            Console.WriteLine("Do you wish to buy some crypto from the business studies student?");
-            Thread.Sleep(1000);
+            Console.WriteLine("You enter into a into one of the business studies class rooms \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("The student comes over and begins trying to sell you crypto \nPress Enter to continue");
+            Console.ReadLine();
+            Console.WriteLine("Do you wish to buy some crypto from the business studies student? \nPress Enter to continue");
+            Console.ReadLine();
             Console.Write("Yes or No?");
             response = Console.ReadLine();
             if (response == "yes")
             {
-                Console.WriteLine("[Business Studies Student]: Great I will sign you up - business studies student");
-                Thread.Sleep(3000);
-                Console.WriteLine("[Business Studies Student]: Hey there! Want to skyrocket your bank account to the moon?");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: Well, hold onto your seatbelt because I've got something hotter than Elon's tweets: cryptocurrencies!");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: Picture this: you, sipping champagne on a yacht, courtesy of your crypto investments.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: Gone are the days of boring stocks and bonds. We're talking about digital gold, baby!");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: With crypto, you're not just an investor, you're a pioneer in the wild west of finance.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: And guess what? You don't need a fancy suit or a Wall Street address to get started.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: In the crypto world, everyone's welcome, from the hoodie-wearing tech geek to the hipster barista.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: So, what are you waiting for? Let's make those dreams of Lambos and private islands a reality!");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: Are you ready to dive into the crypto ocean with me?");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: Just imagine the thrill of riding the waves of Bitcoin highs and dodging the lows.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: It's like being a surfer on the biggest financial wave of the century!");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: And hey, even if you wipe out, there's always another wave waiting to lift you back up.");
-                Thread.Sleep(3000); 
-                Console.WriteLine("[Business Studies Student]: So, grab your board and let's catch that crypto wave together!");
+                Console.WriteLine("[Business Studies Student]: Great I will sign you up - business studies student  \nPress Enter to continue");
+                Console.ReadLine();
+                Console.WriteLine("[Business Studies Student]: Hey there! Want to skyrocket your bank account to the moon?  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: Well, hold onto your seatbelt because I've got something hotter than Elon's tweets: cryptocurrencies!  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: Picture this: you, sipping champagne on a yacht, courtesy of your crypto investments.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: Gone are the days of boring stocks and bonds. We're talking about digital gold, baby!  \nPress Enter to continue");
+                Console.ReadLine();
+                Console.WriteLine("[Business Studies Student]: With crypto, you're not just an investor, you're a pioneer in the wild west of finance.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: And guess what? You don't need a fancy suit or a Wall Street address to get started.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: In the crypto world, everyone's welcome, from the hoodie-wearing tech geek to the hipster barista.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: So, what are you waiting for? Let's make those dreams of Lambos and private islands a reality!  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: Are you ready to dive into the crypto ocean with me?  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: Just imagine the thrill of riding the waves of Bitcoin highs and dodging the lows.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: It's like being a surfer on the biggest financial wave of the century!  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: And hey, even if you wipe out, there's always another wave waiting to lift you back up.  \nPress Enter to continue");
+                Console.ReadLine(); 
+                Console.WriteLine("[Business Studies Student]: So, grab your board and let's catch that crypto wave together!  \nPress Enter to continue");
             }
             else
             {
@@ -550,9 +554,9 @@ namespace vg_the_game
             mathsid = 1;
 
             Console.WriteLine("You entered the Maths Room\nDeacon is there, He does not look happy");
-            Thread.Sleep(1000);
+            Console.ReadLine();
             Console.WriteLine("[Deacon]: Vaughn you are making the tutorals a nightmare\nnone of the questions are easy");
-            Thread.Sleep(1000);
+            Console.ReadLine();
             Console.WriteLine("[Deacon]: What is  eiπ + ln(−1) = x2 +∫0∞​xsin(x)​dx");
             Console.ReadLine();
             Console.WriteLine("[Deacon]: Wrong. I will have to tech you a lesson about maths");
