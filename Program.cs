@@ -293,7 +293,7 @@ namespace vg_the_game
                 {
                     Console.WriteLine("Please select from the displayed options");
                 }
-            }
+            
 
 
 
