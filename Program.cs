@@ -38,6 +38,8 @@ namespace vg_the_game
         }
         /*starting bug fixing*/
 
+
+
         static void will()//method to add a enemy copy this when adding someone to the game
         {
             enemy will;
@@ -230,25 +232,28 @@ namespace vg_the_game
             Console.Clear();
             Console.WriteLine("You are in the Hallway");
             Thread.Sleep(1000);
-           
+
             if (hallwayintro == 0)
             {
                 Console.WriteLine("You spot a pen lying on the ground, it seems appears to be the last Te Pūkenga BIT pen? ");
                 Thread.Sleep(1000);
-                Console.WriteLine("Would you like to pick up the pen (1) or leave it on the ground as there are better things to find (0)");
-                temp = Console.ReadLine();
-                input = Convert.ToInt32(temp);
+                do
+                {
+                    Console.WriteLine("Would you like to pick up the pen (1) or leave it on the ground as there are better things to find (0)");
+                    temp = Console.ReadLine();
+                    input = Convert.ToInt32(temp);
 
-                if (input == 1)
-                {
-                    Console.WriteLine("You have picked up the pen");
-                    pen = 1;
-                }
-                else
-                {
-                    pen = 0; //If there is a chance they somehow go back and don't pick up the pen (Can be removed later)
-                    Console.WriteLine("You choose not to pick up the pen it probably wasn't important");
-                }
+                    if (input == 1)
+                    {
+                        Console.WriteLine("You have picked up the pen");
+                        pen = 1;
+                    }
+                    else
+                    {
+                        pen = 0; //If there is a chance they somehow go back and don't pick up the pen (Can be removed later)
+                        Console.WriteLine("You choose not to pick up the pen it probably wasn't important");
+                    }
+                } while (true);
             }
 
 
@@ -873,25 +878,37 @@ namespace vg_the_game
 
         static void fight()
         {
+            string option;
+            int hit;
             Health = 100+armour;
             int charge = 0;
             Random random = new Random();
             do
             {
-                Console.WriteLine($"You have {Health} HP and {energy} Energy.                                                          {EnemyName} has {EnemyHealth} HP");//Change to name from list
-                Console.WriteLine("---------------------------------------------------------------------------------------------------------------");
-                Console.WriteLine("Choose your move!: \n1: Strong Attack \n2: Medium Attack \n3: Low Attack \n4: Charge Attack \n5: Gain Energy");
+                do
+                {
+                    Console.WriteLine($"You have {Health} HP and {energy} Energy.                                                          {EnemyName} has {EnemyHealth} HP");//Change to name from list
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------");
+                    Console.WriteLine("Choose your move!: \n1: Strong Attack \n2: Medium Attack \n3: Low Attack \n4: Charge Attack \n5: Gain Energy");
 
-                int option = Convert.ToInt32(Console.ReadLine());
-                int hit = random.Next(101);
+                    option = Convert.ToString(Console.ReadLine().ToLower());
+                    hit = random.Next(101);
+                    Console.Clear();
+                    if (option != "1" && option != "2" && option != "3" && option != "4" && option != "5")
+                    {
+                        Console.WriteLine("Please enter 1,2,3,4 or 5");
+                        Thread.Sleep(2000);
+                        Console.Clear();
+                    }
+                }while(option != "1" && option != "2" && option != "3" && option != "4" && option != "5");
 
                 switch (option)
                 {
-                    case 1: if (energy >= 40) { energy -= 40; Damage = random.Next(30, 41); if (hit > 84) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Strong Attack"); break;
-                    case 2: if (energy >= 20) { energy -= 20; Damage = random.Next(19, 32); if (hit > 50) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Medium Attack"); break;
-                    case 3: if (energy >= 10) { energy -= 10; Damage = random.Next(9, 22); ; if (hit > 25) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Low Attack"); break;
-                    case 4: if (charge == 3) { Damage = random.Next(50, 80); EnemyHealth -= Damage + weapon; charge = 0; } else charge++; break;
-                    case 5: int energyGained = random.Next(1, 50); energy = Math.Min(100, energy + energyGained); break;
+                    case "1": if (energy >= 40) { energy -= 40; Damage = random.Next(30, 41); if (hit > 84) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Strong Attack"); break;
+                    case "2": if (energy >= 20) { energy -= 20; Damage = random.Next(19, 32); if (hit > 50) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Medium Attack"); break;
+                    case "3": if (energy >= 10) { energy -= 10; Damage = random.Next(9, 22); ; if (hit > 25) EnemyHealth -= Damage + weapon; else Console.WriteLine("You missed"); } else Console.WriteLine("you dont have enough energy for the Low Attack"); break;
+                    case "4": if (charge == 3) { Damage = random.Next(50, 80); EnemyHealth -= Damage + weapon; charge = 0; } else charge++; break;
+                    case "5": int energyGained = random.Next(1, 50); energy = Math.Min(100, energy + energyGained); break;
                 }
 
                 if (EnemyHealth > 0) enemyAttack(); // Enemy attacks only if it's still alive
