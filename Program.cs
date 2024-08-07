@@ -237,8 +237,7 @@ namespace vg_the_game
             {
                 Console.WriteLine("You spot a pen lying on the ground, it seems appears to be the last Te Pūkenga BIT pen? ");
                 Thread.Sleep(1000);
-                do
-                {
+
                     Console.WriteLine("Would you like to pick up the pen (1) or leave it on the ground as there are better things to find (0)");
                     temp = Console.ReadLine();
                     input = Convert.ToInt32(temp);
@@ -253,8 +252,8 @@ namespace vg_the_game
                         pen = 0; //If there is a chance they somehow go back and don't pick up the pen (Can be removed later)
                         Console.WriteLine("You choose not to pick up the pen it probably wasn't important");
                     }
-                } while (true);
-            }
+                }
+            
 
 
             hallwayintro = 1;
