@@ -216,7 +216,7 @@ namespace vg_the_game
             Console.ReadLine();
             Console.WriteLine("[Office Lady]: I AM THE LORAX AND I SPEAK FOR THE TREES, AND THE TREES SAY F U C K Y O U \nPress Enter to continue");
             Console.ReadLine();
-            Console.WriteLine("You see he morphs into a blob of glue and staplers for hands \nPress Enter to continue ");
+            Console.WriteLine("You see she morphs into THE LORAX \nPress Enter to continue ");
             Console.ReadLine();
             Console.WriteLine("You must now fight your way out of this one! \nPress Enter to continue");
 
