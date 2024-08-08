@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace vg_the_game
 {
-    public struct enemy
+    public struct Enemy
     {
         public string name;
         public int enemyHealth;
@@ -21,12 +21,12 @@ namespace vg_the_game
         public static int pen = 0; 
         public static int roomid;
         public static double difficulty = 0.1;
-        public static string EnemyName;
+        public static string EnemyName = " ";//empty string committed
         public static double DamageMod = 1;
         public static int card = 0;
         public static int hallwayid = 0;
         //Room Visit ids
-        public static int officeid = 0, hallwayintro = 0, closetid = 0, boom1id = 0, broom2id = 0;  //first floor 
+        public static int officeid = 0, hallwayintro = 0, closetid = 0, boom1id = 0, D102id = 0;  //first floor 
         public static int printerid = 0, studioid = 0, mathsid = 0; //second floor
 
 
@@ -40,18 +40,18 @@ namespace vg_the_game
 
 
 
-        static void will()//method to add a enemy copy this when adding someone to the game
+        static void officeLady()//method to add a enemy copy this when adding someone to the game
         {
-            enemy will;
-            will.name = "Office Lady";//sets enemy name
-            will.enemyHealth = 25;// sets enemy health
-            EnemyHealth = will.enemyHealth;// overides the last enemies health
-            EnemyName = will.name;
+            Enemy officeLady;
+            officeLady.name = "Office Lady";//sets enemy name
+            officeLady.enemyHealth = 25;// sets enemy health
+            EnemyHealth = officeLady.enemyHealth;// overides the last enemies health
+            EnemyName = officeLady.name;
             DamageMod = 1;
         }
         static void BussinessGuy()
         {
-            enemy BussinessStudent;
+            Enemy BussinessStudent;
             BussinessStudent.name = "Business Student";//sets enemy name
             BussinessStudent.enemyHealth = 20;// sets enemy health
             EnemyHealth = BussinessStudent.enemyHealth;// overides the last enemies health
@@ -60,7 +60,7 @@ namespace vg_the_game
         }
         static void Krissi()
         {
-            enemy Krissi;
+            Enemy Krissi;
             Krissi.name = "Krissi Wood";//sets enemy name
             Krissi.enemyHealth = 50;// sets enemy health
             EnemyHealth = Krissi.enemyHealth;// overides the last enemies health
@@ -69,25 +69,17 @@ namespace vg_the_game
         }
         static void farmBot()
         {
-            enemy farmBot;
-            farmBot.name = "Farm Bot";//sets enemy name
+            Enemy farmBot;
+            farmBot.name = "Farm RoBot";//sets enemy name
             farmBot.enemyHealth = 100;// sets enemy health
             EnemyHealth = farmBot.enemyHealth;// overides the last enemies health
             EnemyName = farmBot.name;
             DamageMod = 1.5;
         }
-        static void printer()
-        {
-            enemy printer;
-            printer.name = "3D Printer";//sets enemy name
-            printer.enemyHealth = 30;// sets enemy health
-            EnemyHealth = printer.enemyHealth;// overides the last enemies health
-            EnemyName = printer.name;
-            DamageMod = 1.25;
-        }
+        
         static void mathsStudent()
         {
-            enemy mathStudent;
+            Enemy mathStudent;
             mathStudent.name = "Deacon";//sets enemy name
             mathStudent.enemyHealth = 20;// sets enemy health
             EnemyHealth = mathStudent.enemyHealth;// overides the last enemies health
@@ -96,7 +88,7 @@ namespace vg_the_game
         }
         static void Victor()
         {
-            enemy Victor;
+            Enemy Victor;
             Victor.name = "Victor";//sets enemy name
             Victor.enemyHealth = 75;// sets enemy health
             EnemyHealth = Victor.enemyHealth;// overides the last enemies health
@@ -165,7 +157,7 @@ namespace vg_the_game
                     hallway();
                     break;
                 case 1:
-                    hallway2();
+                    LVL2Hallway();
                     break;
                 case 2:
                     hallway3();
@@ -225,7 +217,7 @@ namespace vg_the_game
 
             Console.ReadLine();
             officeid = 1; //prevents user from going back
-            will(); //Will is known as the office lady
+            officeLady(); //loading stats for office lady
             fight(); //I believe this should be moved into the office yes you are correct i have moved it there now
             string choice = Console.ReadLine();
             switch (choice)
@@ -299,7 +291,8 @@ namespace vg_the_game
 
             hallwayintro = 1;
 
-            Console.WriteLine("You stand in the hallway, you can navigate to the (office), (broom1), (broom2), (closet)"); //Need to rename broom1 and broom2
+
+            Console.WriteLine("You stand in the hallway you can navigate to the (office), (D101), (D102), (closet)"); //Need to rename D101 and D102
             Console.WriteLine("Once you've explored all rooms on level 1, press ENTER");
             string choice = Console.ReadLine();
             switch (choice)
@@ -314,25 +307,25 @@ namespace vg_the_game
                 case "office":
                     office();
                     break;
-                case "broom1":
-                    broom1();
+                case "D101":
+                    D101();
                     break;
-                case "broom2":
-                    broom2();
+                case "D102":
+                    D102();
                     break;
                 case "closet":
                     closet();
                     break;
             }
 
-            if (officeid == 1 && closetid == 1 && boom1id == 1 && broom2id== 1) //I feel like this should be a while loop and while not equal to this everything else runs for level 1?
+            if (officeid == 1 && closetid == 1 && boom1id == 1 && D102id== 1) //I feel like this should be a while loop and while not equal to this everything else runs for level 1?
             {
                 Console.WriteLine("Congrats you have explored all of level 1");
                 Thread.Sleep(3000);
                 Console.WriteLine("The elevator is going up");
                 Thread.Sleep(3000);
                 hallwayid = 1;
-                hallway2();
+                LVL2Hallway();
             }
 
         }
@@ -399,7 +392,7 @@ namespace vg_the_game
 
 
         //Boss Room
-        static void broom1()
+        static void D101()
         {
             string response;
 
@@ -432,14 +425,14 @@ namespace vg_the_game
                 fight();
             }
 
-            Console.WriteLine("You stand in the broom1 you can navigate to the (broom1), (hallway)");
+            Console.WriteLine("You stand in the D101 you can navigate to the (D101), (hallway)");
             string choice = Console.ReadLine();
             switch (choice)
             {
-                case "broom1":
+                case "D101":
                     Console.WriteLine("You are already here press ENTER to continue");
                     Console.ReadLine();
-                    broom1();
+                    D101();
                     break;
                 case "hallway":
                     hallway();
@@ -448,11 +441,11 @@ namespace vg_the_game
         }
 
         //Boss Room
-        static void broom2()
+        static void D102()
         {
             string response;
 
-            if (broom2id == 1)
+            if (D102id == 1)
             {
                 Console.WriteLine("You have already visited here, you have been sent back to the hallway");
                 hallway();
@@ -463,13 +456,14 @@ namespace vg_the_game
             //Business Student Boss
             Console.Clear();
             roomid = 5;
-            broom2id = 1;
-            Console.WriteLine("You enter into a into one of the business studies class rooms \nPress Enter to continue");
-            Console.ReadLine();
-            Console.WriteLine("The student comes over and begins trying to sell you crypto \nPress Enter to continue");
-            Console.ReadLine();
-            Console.WriteLine("Do you wish to buy some crypto from the business studies student? \nPress Enter to continue");
-            Console.ReadLine();
+            D102id = 1;
+            Console.WriteLine("You enter into a into one of the business studies class rooms");
+            Thread.Sleep(1000);
+            Console.WriteLine("The student comes over and begins trying to sell you crypto");
+            Thread.Sleep(1000);
+            Console.WriteLine("Do you wish to buy some crypto from the business studies student?");
+            Thread.Sleep(1000);
+
             Console.Write("Yes or No?");
             response = Console.ReadLine();
             if (response == "yes")
@@ -509,15 +503,15 @@ namespace vg_the_game
                 BussinessGuy();
                 fight();
             }
-            Console.WriteLine("You stand in the broom2 you can navigate to the (broom2), (hallway)");
-            Console.WriteLine("You can now navigate to (broom2) or (hallway)");
+            Console.WriteLine("You stand in the D102 you can navigate to the (D102), (hallway)");
+            Console.WriteLine("You can now navigate to (D102) or (hallway)");
             string choice = Console.ReadLine();
             switch (choice)
             {
-                case "broom2":
+                case "D102":
                     Console.WriteLine("You are already here press ENTER to continue");
                     Console.ReadLine();
-                    //broom2();
+                    //D102();
                     Console.WriteLine("You can't go back into a room you are already in! Try the hallway instead");
                     hallway();
                     break;
@@ -531,13 +525,13 @@ namespace vg_the_game
         
         //Second Floor
 
-        static void hallway2()
+        static void LVL2Hallway()
         {
             Console.Clear();
             Console.WriteLine("You are now on the 2nd floor");
             Console.WriteLine("Once you've explored all rooms on level 2, you may need to press ENTER");
             Console.WriteLine("You stand in the second floor hallway you can navigate to the (printer), (studio), (maths)");
-            string choice = Console.ReadLine();
+            string? choice = Console.ReadLine();
             switch (choice)
             {
                 case "printer":
@@ -549,14 +543,14 @@ namespace vg_the_game
                     {
                         Console.WriteLine("You need a card to unlock this room, You can get this by visting the maths room");
                         Thread.Sleep(3000);
-                        hallway2();
+                        LVL2Hallway();
                     }
                     break;
                 case "studio":
                     studioRoom();
                     break;
                 case "maths":
-                    mathsRoom();
+                    D202();
                     break;
             }
 
@@ -573,13 +567,13 @@ namespace vg_the_game
 
 
         }
-        static void mathsRoom()
+        static void D202()
         {
 
             if (mathsid == 1)
             {
                 Console.WriteLine("You have already visited here, you have been sent back to the hallway");
-                hallway2();
+                LVL2Hallway();
             }
 
             mathsid = 1;
@@ -603,7 +597,7 @@ namespace vg_the_game
             if (studioid == 1)
             {
                 Console.WriteLine("You have already visited here, you have been sent back to the hallway");
-                hallway2();
+                LVL2Hallway();
             }
 
 
@@ -618,7 +612,7 @@ namespace vg_the_game
             {
                 Console.WriteLine("[Vic]: Wow I didn't expect you to guess that! Well done.");
                 Console.WriteLine("Go explore the hallway");
-                hallway2();
+                LVL2Hallway();
             }
             
             else
@@ -637,7 +631,7 @@ namespace vg_the_game
             if (printerid == 1)
             {
                 Console.WriteLine("You have already visited here, you have been sent back to the hallway");
-                hallway2();
+                LVL2Hallway();
             }
 
 
@@ -662,7 +656,7 @@ namespace vg_the_game
                     Console.WriteLine("You got a sword");
                 }
             } while (choice != 1 && choice !=2);
-            hallway2();
+            LVL2Hallway();
         }
 
 
@@ -672,7 +666,7 @@ namespace vg_the_game
         {
             Console.WriteLine("You are now on the 3rd floor");
             Console.WriteLine("You stand in the third floor hallway you can navigate to the (hallway), (office)"); 
-            string choice = Console.ReadLine();
+            string? choice = Console.ReadLine();
             switch (choice)
             {
                 case "hallway":
